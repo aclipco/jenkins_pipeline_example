@@ -11,5 +11,6 @@ stage("Stage3"){
 }
 stage("Stage4"){
   echo "Hello Word"
+  slackSend channel: 'nagios_alerts', message: 'Completed'
   }
 }
