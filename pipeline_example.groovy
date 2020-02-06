@@ -1,7 +1,7 @@
 node {
     properties([
         buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')),
-        pipelineTriggers([cron('* * * * *')])
+        //pipelineTriggers([cron('* * * * *')])
         ])
 
     stage("Pull Repo"){
@@ -26,9 +26,9 @@ node {
         // Performs task on remote system
         //sh "curl http://jenkins_master.acirrustech.com:8080/job/Item1/build?token=ITEM1"
     stage("Script"){
-		sh label: '', script: 
+		sh label: '', script:
 		'''#!/bin/bash
-			if [ ! -f /tmp/foo.txt ]; 
+			if [ ! -f /tmp/foo.txt ];
 			then
 				echo "File not found!"
 				echo "Creating a file"
