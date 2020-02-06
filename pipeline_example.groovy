@@ -9,7 +9,7 @@ stage("Stage2"){
 stage("Stage3"){
   echo "Hello Word"}
 }
-stage("Stage4"){
+stage("notifications to slack"){
   echo "Hello Word"
   slackSend channel: 'nagios_alerts', message: 'Completed'
   }
