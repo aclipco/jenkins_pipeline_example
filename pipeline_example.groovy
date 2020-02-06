@@ -22,7 +22,7 @@ node {
     stage("Deploy to QA"){
         echo "Hello World"
     }
-    stage("Perform task on Husein Machine")
+    stage("Perform task on Huseyin Machine")
         // Performs task on remote system
         //sh "curl http://jenkins_master.acirrustech.com:8080/job/Item1/build?token=ITEM1"
     stage("Script"){
